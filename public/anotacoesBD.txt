@@ -1,0 +1,75 @@
+$db = new Database;
+date_default_timezone_set('America/Sao_Paulo');
+
+/*
+$usuarioId = 10;
+$titulo = "Titulos Post";
+$texto = "Texto do Post";
+
+$db->query("INSERT INTO tb_mensagem (usuario_id, titulo, texto) VALUES (:usuario_id, :titulo, :texto)");
+$db->bind(":usuario_id", $usuarioId);
+$db->bind(":titulo", $titulo);
+$db->bind(":texto", $texto);
+
+$db->executa();
+
+echo '<hr>Total Resultados: '. $db->totalResultados();
+echo '<hr>Ultimo id: '. $db->ultimoIdInserido();
+*/
+
+/*$id = 11;
+$usuarioId = 4;
+$titulo = "Titulo atualizado";
+$texto = "Texto atualizado";
+$data = "2020-12-5 17:12:16";
+//$criado_em = "2020-12-5 17:12:16";
+$criado_em = date('Y-m-d H:i:s');
+
+$db->query("UPDATE tb_mensagem SET usuario_id = :usuario_id, titulo = :titulo, texto = :texto, criado_em = :criado_em WHERE id = :id");
+$db->bind(":id", $id);
+$db->bind(":usuario_id", $usuarioId);
+$db->bind(":titulo", $titulo);
+$db->bind(":texto", $texto);
+$db->bind(":criado_em", $criado_em);
+
+$db->executa(); //nao esquecer dessa linha para atualizar kkk
+
+echo '<hr>Total Resultados: '. $db->totalResultados();
+*/
+
+/*$id = 11;
+
+$db->query("DELETE FROM tb_mensagem WHERE id = :id");
+$db->bind(":id", $id);
+
+$db->executa(); //nao esquecer dessa linha para atualizar kkk
+
+echo '<hr>Total Resultados: '. $db->totalResultados();*/
+
+//tras o resultado da tebela tb_mensagem, culuna titulo 
+
+//ASC = do primeiro ao ultimo
+//DESC = do ultimo ao primeiro 
+
+//$db->query("SELECT * FROM tb_mensagem ORDER BY id DESC");
+//$db->query("SELECT * FROM tb_mensagem ORDER BY id ASC");
+//$db->query("SELECT * FROM tb_mensagem LIMIT 2");
+//$db->query("SELECT * FROM tb_mensagem LIMIT 0, 2");
+//$db->query("SELECT * FROM tb_mensagem LIMIT 2, 2");
+
+//$id = 10;
+
+//$db->query("SELECT * FROM tb_mensagem WHERE id = {$id}");
+//$db->query("SELECT * FROM tb_mensagem");
+$db->query("SELECT * FROM tb_produtos");
+
+//$db->query("SELECT * FROM tb_mensagem");
+//$db->resultado();
+//echo $db->resultado()->titulo;
+
+//tras os resultados da tebela tb_mensagem, culuna titulo 
+/*foreach($db->resultados() as $tabemaMensagem) {
+    echo $tabemaMensagem->id.' - '.$tabemaMensagem->titulo.'<br>';
+}*/
+
+//echo '<hr>Total Resultados: '. $db->totalResultados();

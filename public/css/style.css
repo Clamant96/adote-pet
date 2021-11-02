@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* GLOBAL */
+html, body {
+    height: 100vh;
+
+    font-family: var(--font-titillium-web);
+
+    background-color: var(--background-white);
+
+}
+
+:root {
+    --font-titillium-web: 'Titillium Web', sans-serif;
+    --font-amaranth: 'Amaranth', sans-serif;
+
+    --text-color-white: #f1f1f1;
+    --text-color-yellow: #D7B007;
+    --text-color-green: #00463F;
+    --text-color-gray: #757575;
+
+    --background-color-yellow: #D7B007;
+    --background-color-white: #FFFFFF;
+    --background-white: #f1f1f1;
+    --background-color-green: #00463F;
+    --background-color-green-escuro: #133935;
+    --background-footer-copy: #191919;
+    --background-color-gray: #DCDCDC;
+
+    --border-color-yellow: #D7B007;
+
+    --font-size-header: 18px;
+    --font-size-select: 13px;
+    --font-size-select-menu: 16px;
+    --font-size-botao: 13px;
+    --font-size-h1: 45px;
+    --font-size-h2: 25px;
+    --font-size-footer: 14px;
+
+    --box-shadow: #26262690;
+
+}
