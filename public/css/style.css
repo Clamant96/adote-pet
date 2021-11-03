@@ -41,8 +41,330 @@ html, body {
     --font-size-botao: 13px;
     --font-size-h1: 45px;
     --font-size-h2: 25px;
+    --font-size-copy: 14px;
     --font-size-footer: 14px;
 
     --box-shadow: #26262690;
+
+}
+
+/* MENU */
+header {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--background-color-white);
+
+}
+
+header .header {
+    width: 70%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+header .header .img {
+    width: 10%;
+    height: auto;
+
+}
+
+header .header .img img {
+    width: 100%;
+    height: auto;
+
+}
+
+header .header nav {
+    width: 70%;
+    height: auto;
+
+}
+
+header .header nav ul {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    list-style: none;
+
+}
+
+header .header nav ul li {
+    padding: 1% 2%;
+
+    font-weight: 600;
+
+    color: var(--text-color-green);
+
+    transition: color, .3s ease-in-out;
+
+}
+
+header .header nav ul li:hover {
+    color: var(--text-color-yellow);
+
+}
+
+header .header nav ul .quero-adotar {
+    border: 1px solid var(--text-color-green);
+    border-radius: 5px;
+
+}
+
+header .header nav ul .quero-adotar:hover {
+    background-color: var(--background-color-green-escuro);
+
+    color: var(--text-color-white);
+
+}
+
+header .header .login-cadastro {
+    width: 20%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+header .header .login-cadastro p {
+    padding: 4% 7%;
+
+    font-weight: 600;
+
+    color: var(--text-color-green);
+
+    transition: color, .3s ease-in-out;
+
+}
+
+header .header .login-cadastro p:hover {
+    color: var(--text-color-yellow);
+
+}
+
+header .header .login-cadastro .cadastro {
+    border: 1px solid var(--text-color-green);
+    border-radius: 5px;
+
+    background-color: var(--background-color-green-escuro);
+
+    color: var(--text-color-white);
+
+    transition: border, background-color, color, .3s ease-in-out;
+
+}
+
+header .header .login-cadastro .cadastro:hover {
+    border: 1px solid var(--text-color-green);
+    border-radius: 5px;
+
+    background-color: transparent;
+
+    color: var(--text-color-green);
+
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    height: auto;
+
+    background-color: var(--background-color-green-escuro);
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+}
+
+footer .img {
+    width: 20%;
+    height: auto;
+
+}
+
+footer .img img {
+    width: 100%;
+    height: auto;
+
+}
+
+footer nav {
+    width: 15%;
+    height: auto;
+
+    margin-top: 2.5%;
+
+}
+
+footer nav h2 {
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-h2);
+
+    color: var(--background-color-gray);
+
+}
+
+footer nav ul {
+    list-style: none;
+
+}
+
+footer nav ul li {
+    color: var(--background-color-gray);
+
+}
+
+footer nav ul li a {
+    text-decoration: none;
+
+    color: var(--background-color-gray);
+}   
+
+.copy {
+    padding: 1%;
+
+    width: 98%;
+    height: auto;
+
+    background-color: var(--background-footer-copy);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: var(--font-size-copy);
+    font-family: var(--font-amaranth);
+    font-weight: 600;
+
+    color: var(--text-color-white);
+
+}
+
+.copy a {
+    text-decoration: none;
+
+    font-size: var(--font-size-copy);
+    font-family: var(--font-amaranth);
+    font-weight: 600;
+
+    color: var(--text-color-white);
+
+    margin-left: 0.5%;
+
+}
+
+/* SECTION HOME */
+section {
+    margin: 2% 0%;
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+section .animais-para-adocao {
+    padding: 2%;
+
+    width: 66%;
+    height: auto;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+}
+
+section .animais-para-adocao .select-animais {
+    width: 20%;
+    height: auto;
+
+    background-color: var(--background-color-white);
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadow);
+
+    border-radius: 5px;
+
+}
+
+section .animais-para-adocao .select-animais h2 {
+    font-size: var(--font-size-h2);
+    font-weight: 700;
+
+    width: 100%;
+    height: auto;
+
+}
+
+section .animais-para-adocao .select-animais select {
+    border: none;
+
+    width: 100%;
+    height: auto;
+
+    outline: none;
+
+}
+
+section .animais-para-adocao .animal-doacao {
+    width: 70%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    flex-wrap: wrap;
+
+}
+
+section .animais-para-adocao .animal-doacao .container {
+    width: 33.33%;
+    height: 40vh;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: var(--background-color-white);
+
+}
+
+section .animais-para-adocao .animal-doacao .container .img {
+    width: 100%;
+    height: auto;
+
+}
+
+section .animais-para-adocao .animal-doacao .container .img img {
+    width: 100%;
+    height: auto;
+
+}
+
+section .animais-para-adocao .animal-doacao .conteudo {
+    padding: 5%;
+
+    width: 90%;
+    height: auto;
 
 }

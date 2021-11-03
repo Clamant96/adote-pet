@@ -1,40 +1,29 @@
 <footer>
-    <div id="footer">
-        <div id="logo">
-            <img src="<?=URL?>/public/img/logoSiteWhite.png">
-        </div>
-        <div id="menuFooter">
-            <p>Menu</p>
-            <ul>
-                <a href="<?=URL?>"><li>Home</li></a>
-                <a href="<?=URL?>/paginas/sobre"><li>Sobre</li></a>
-                <a href="#"><li>Layouts</li></a>
-                <a href="<?=URL?>/posts/listar"><li>Mensagem</li></a>
-            </ul>
-        </div>
-        <div id="contatoFooter">
-            <p>Contato</p>
-            <ul>
-                <li>kevin.helpconnect@gmail.com</li>
-                <li>cel.: (11) 9-7222-8292</li>
-            </ul>
-        </div>
-        <div id="iconsFooter">
-            <div id="icon">
-                <img src="<?=URL?>/public/img/instagram.png">
-            </div>
-            <div id="icon">
-                <img src="<?=URL?>/public/img/youtube.png">
-            </div>
-            <div id="icon">
-                <img src="<?=URL?>/public/img/facebook.png">
-            </div>
-            <div id="icon">
-                <img src="<?=URL?>/public/img/github.png">
-            </div>
-        </div>
+    <div class="img">
+        <img src="<?= URL ?>/img/logo-adote-pet.png" alt="<?= APP_NOME ?>">
     </div>
-    <div id="copyright">
-        <p>Copyright &copy 2020 - <?= date('Y') ?> by <b><?=APP_NOME?></b></p>
-    </div>
+    <nav>
+        <h2>Adote</h2>
+        <ul>
+            <li><a href="#">Adote com responsabilidade</a></li>
+            <li><a href="#">Pesquisar animais</a></li>
+        </ul>
+    </nav>
+    <nav>
+        <h2>Colabore</h2>
+        <ul>
+            <li><a href="#">Doe qualquer valor</a></li>
+            <li><a href="#">Faça parte do Clube do Amigo</a></li>
+            <li><a href="#">Compre nas Lojas Parceiras</a></li>
+        </ul>
+    </nav>
+    <nav>
+        <h2>Divulgue um animal</h2>
+        <ul>
+            <li><a href="#">Cadastrar animal</a></li>
+        </ul>
+    </nav>
 </footer>
+<div class="copy">
+    Copyright © 2020 - 2021 by <a href="https://helpconnect.com.br/framework/" target="_black">HelpConnect</a>
+</div>
