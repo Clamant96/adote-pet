@@ -4,17 +4,17 @@
             <img src="<?= URL ?>/img/logo-adote-pet.png" alt="<?= APP_NOME ?>" />
         </div>
         <nav>
-            <ul>
-                <li>Home</li>
-                <li>Colabore</li>
-                <li>Blog</li>
-                <li>Meu Perfil</li>
-                <li class="quero-adotar">Quero adota</li>
-            </ul>
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="#">Colabore</a>
+                <a href="#">Blog</a>
+                <a href="#">Meu Perfil</a>
+                <a href="#" class="quero-adotar">Quero adota</a>
+            </div>
         </nav>
         <div class="login-cadastro">
-            <p>Entrar</p>
-            <p class="cadastro">Cadastre-se</p>
+            <a href="#">Entrar</a>
+            <a href="#" class="cadastro">Cadastre-se</a>
         </div>
     </div>
 </header>

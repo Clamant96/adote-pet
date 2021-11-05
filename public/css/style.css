@@ -41,6 +41,8 @@ html, body {
     --font-size-botao: 13px;
     --font-size-h1: 45px;
     --font-size-h2: 25px;
+    --font-size-nome-animal-h2: 20px;
+    --font-size-nome-animal-p: 16px;
     --font-size-copy: 14px;
     --font-size-footer: 14px;
 
@@ -58,6 +60,8 @@ header {
     justify-content: center;
 
     background-color: var(--background-color-white);
+
+    box-shadow: 0px 3px 10px -10px var(--box-shadow);
 
 }
 
@@ -89,7 +93,7 @@ header .header nav {
 
 }
 
-header .header nav ul {
+header .header nav .menu {
     width: 100%;
     height: auto;
 
@@ -97,33 +101,33 @@ header .header nav ul {
     align-items: center;
     justify-content: flex-start;
 
-    list-style: none;
-
 }
 
-header .header nav ul li {
+header .header nav .menu a {
     padding: 1% 2%;
 
     font-weight: 600;
 
     color: var(--text-color-green);
 
+    text-decoration: none;
+
     transition: color, .3s ease-in-out;
 
 }
 
-header .header nav ul li:hover {
+header .header nav .menu a:hover {
     color: var(--text-color-yellow);
 
 }
 
-header .header nav ul .quero-adotar {
+header .header nav .menu .quero-adotar {
     border: 1px solid var(--text-color-green);
     border-radius: 5px;
 
 }
 
-header .header nav ul .quero-adotar:hover {
+header .header nav .menu .quero-adotar:hover {
     background-color: var(--background-color-green-escuro);
 
     color: var(--text-color-white);
@@ -140,8 +144,10 @@ header .header .login-cadastro {
 
 }
 
-header .header .login-cadastro p {
+header .header .login-cadastro a {
     padding: 4% 7%;
+
+    text-decoration: none;
 
     font-weight: 600;
 
@@ -151,7 +157,7 @@ header .header .login-cadastro p {
 
 }
 
-header .header .login-cadastro p:hover {
+header .header .login-cadastro a:hover {    
     color: var(--text-color-yellow);
 
 }
@@ -219,21 +225,52 @@ footer nav h2 {
 
 }
 
-footer nav ul {
-    list-style: none;
+footer nav .menu {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
 
 }
 
-footer nav ul li {
-    color: var(--background-color-gray);
-
-}
-
-footer nav ul li a {
+footer nav .menu a {
     text-decoration: none;
 
     color: var(--background-color-gray);
+
 }   
+
+footer nav .menu .redes-sociais {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    width: 100%;
+    height: auto;
+
+}
+
+footer nav .menu .redes-sociais a {
+    background-color: var(--background-color-gray);
+
+    padding: 5%;
+    margin: 5% 0% 0% 0%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+}
+
+footer nav .menu .redes-sociais a svg {
+    color: var(--background-color-green-escuro);
+
+    width: 25px;
+    height: auto;
+
+}
 
 .copy {
     padding: 1%;
@@ -268,7 +305,7 @@ footer nav ul li a {
 
 }
 
-/* SECTION HOME */
+/* SECTION */
 section {
     margin: 2% 0%;
 
@@ -281,10 +318,9 @@ section {
 
 }
 
+/* SECTION HOME */
 section .animais-para-adocao {
-    padding: 2%;
-
-    width: 66%;
+    width: 70%;
     height: auto;
 
     display: flex;
@@ -294,7 +330,9 @@ section .animais-para-adocao {
 }
 
 section .animais-para-adocao .select-animais {
-    width: 20%;
+    padding: 1% 2%;
+
+    width: 16%;
     height: auto;
 
     background-color: var(--background-color-white);
@@ -312,6 +350,8 @@ section .animais-para-adocao .select-animais h2 {
     width: 100%;
     height: auto;
 
+    color: var(--text-color-green);
+
 }
 
 section .animais-para-adocao .select-animais select {
@@ -322,23 +362,27 @@ section .animais-para-adocao .select-animais select {
 
     outline: none;
 
+    color: var(--text-color-green);
+
 }
 
 section .animais-para-adocao .animal-doacao {
-    width: 70%;
+    width: 77%;
     height: auto;
 
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
 
     flex-wrap: wrap;
 
 }
 
 section .animais-para-adocao .animal-doacao .container {
-    width: 33.33%;
-    height: 40vh;
+    width: 32.33%;
+    height: auto;
+
+    margin-bottom: 1.33%;
 
     display: flex;
     align-items: center;
@@ -346,6 +390,12 @@ section .animais-para-adocao .animal-doacao .container {
     justify-content: center;
 
     background-color: var(--background-color-white);
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadow);
+
+    border-radius: 5px;
+
+    text-decoration: none;
 
 }
 
@@ -359,12 +409,38 @@ section .animais-para-adocao .animal-doacao .container .img img {
     width: 100%;
     height: auto;
 
+    border-radius: 5px 5px 0px 0px;
+
+    transition: filter, .3s ease-in-out;
+
+}
+
+section .animais-para-adocao .animal-doacao .container .img img:hover {
+    filter: grayscale(90%);
+
 }
 
 section .animais-para-adocao .animal-doacao .conteudo {
-    padding: 5%;
+    padding: 2% 5% 5% 5%;
 
     width: 90%;
     height: auto;
+
+}
+
+section .animais-para-adocao .animal-doacao .conteudo h2 {
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-h2);
+    font-weight: 600;
+
+    color: var(--text-color-green);
+
+}
+
+section .animais-para-adocao .animal-doacao .conteudo p {
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 500;
+
+    color: var(--text-color-gray);
 
 }

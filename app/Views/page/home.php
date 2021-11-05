@@ -9,15 +9,15 @@
             </select>
         </div>
         <div class="animal-doacao">
-            <div class="container">
+            <a href="#" class="container">
                 <div class="img">
                     <img src="https://cdn.amigonaosecompra.com.br/1176x0/9c04f6ea-621a-4ba0-b97d-0161e0659730/47e56845-b1c6-4798-9ae0-1b25eda14347/47e56845-b1c6-4798-9ae0-1b25eda14347.jpeg?v=63803108619" alt="">
                 </div>
                 <div class="conteudo">
-                    <p>Frufru linda</p>
+                    <h2>Frufru linda</h2>
                     <p>São Paulo, São Paulo</p>
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 </section>
