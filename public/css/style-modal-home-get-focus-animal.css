@@ -16,11 +16,17 @@
 
 /* Modal Content */
 .modal-content {
-    background-color: #fefefe;
+    background-color: var(--background-color-white);
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadow);
+
+    border-radius: 5px;
+
     margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+    padding: 0;
+
+    width: 50%;
+    height: auto;
 
 }
 
@@ -31,11 +37,143 @@
     font-size: 28px;
     font-weight: bold;
 
+    position: absolute;
+
+    display: none;
+
 }
 
 .close:hover, .close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+
+}
+
+
+/* CONFIGURACAO CONTEUDO MODAL */
+.modal-content .animal-focus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: auto;
+
+}
+
+.modal-content .animal-focus .img {
+    width: 50%;
+    height: 70vh;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 125%;
+
+    border-radius: 5px 0px 0px 5px;
+
+}
+
+.modal-content .animal-focus .dados-animal {
+    padding: 2%;
+
+    width: 46%;
+    height: 66vh;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+.modal-content .animal-focus .dados-animal .nome-e-categoria-animal {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+    height: auto;
+
+}
+
+.modal-content .animal-focus .dados-animal .nome-e-categoria-animal h2 {
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-h2);
+    font-weight: 600;
+
+    color: var(--text-color-green);
+
+}
+
+.modal-content .animal-focus .dados-animal .nome-e-categoria-animal p {
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 500;
+
+    color: var(--text-color-gray);
+
+}
+
+.modal-content .animal-focus .dados-animal .endereco-publicado-por {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+    height: auto;
+
+    margin-top: 5%;
+
+}
+
+.modal-content .animal-focus .dados-animal .endereco-publicado-por .dados {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+.modal-content .animal-focus .dados-animal .endereco-publicado-por .dados .icone {
+    width: 5%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 2%;
+    margin-top: 1.3%;
+
+}
+
+.modal-content .animal-focus .dados-animal .endereco-publicado-por .dados .icone svg {
+    width: 100%;
+    height: auto;
+
+    color: var(--background-color-green-escuro);
+
+}
+
+.modal-content .animal-focus .dados-animal .endereco-publicado-por .dados p {
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 500;
+
+    color: var(--text-color-gray);
+
+}
+
+.modal-content .animal-focus .dados-animal .endereco-publicado-por .dados p a {
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 500;
+
+    color: var(--text-color-green);
+
+    text-decoration: none;
 
 }
