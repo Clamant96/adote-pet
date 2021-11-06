@@ -38,11 +38,33 @@ class PaginaController extends Controller {
     }
 
     public function login() {
-        $this->view('user/login');
+        $conteudo = [
+            'email' => '',
+            'senha' => '',
+            'preencha_email' => '',
+            'preencha_senha' => ''
+        ];
+
+        $this->view('user/login', $conteudo);
     }
 
     public function cadastrar() {
-        $this->view('user/cadastrar');
+        $conteudo = [
+            'nome' => '',
+            'email' => '',
+            'celular' => '',
+            'img' => '', 
+            'senha' => '',
+            'confirmar_senha' => '',
+            'preencha_nome' => '',
+            'preencha_email' => '',
+            'preencha_celular' => '',
+            'preencha_img' => '',
+            'preencha_senha' => '',
+            'preencha_confirmar_senha' => ''
+        ];
+
+        $this->view('user/cadastrar', $conteudo);
     }
 
 }

@@ -13,7 +13,7 @@ class Controller {
     }
 
     //carrega as views
-    public function view($view, $dados = []) {
+    public function view($view, $conteudo = []) {
         $arquivo = ('../app/Views/'.$view.'.php');
         if(file_exists($arquivo)):
             //requere o arquivo de view

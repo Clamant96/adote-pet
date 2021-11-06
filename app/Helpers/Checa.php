@@ -17,12 +17,4 @@ class Checa {
         endif;
     }
 
-    public static function checarCelular($celular) {
-        if(!preg_match('/[^a-z0-9]/i', '', $celular)):
-            return true;
-        else:
-            return false;
-        endif;
-    }
-
 }

@@ -14,12 +14,14 @@ class UsuarioController extends Controller {
                 'nome' => trim($formulario['nome']),
                 'email' => trim($formulario['email']),
                 'celular' => trim($formulario['celular']),
+                'img' => trim($formulario['img']),
                 'senha' => trim($formulario['senha']),
                 'confirmar_senha' => trim($formulario['confirmar_senha'])
             ];
 
+            /* IF -> CASO O FORMULARIO ESTEJA VAZIO */
             if(in_array('', $formulario)):
-
+                
                 if(empty($formulario['nome'])):
                     $conteudo['preencha_nome'] = 'Preencha o campo <b>Nome</b>';
                 else:
@@ -36,6 +38,12 @@ class UsuarioController extends Controller {
                     $conteudo['preencha_celular'] = 'Preencha o campo <b>Celular</b>';
                 else:
                     $conteudo['preencha_celular'] = ''; 
+                endif;
+
+                if(empty($formulario['img'])):
+                    $conteudo['preencha_img'] = 'Preencha o campo <b>IMG</b>';
+                else:
+                    $conteudo['preencha_img'] = ''; 
                 endif;
 
                 if(empty($formulario['senha'])):
@@ -56,9 +64,6 @@ class UsuarioController extends Controller {
 
                 elseif(Checa::checarEmail($formulario['email'])):
                     $conteudo['preencha_email'] = 'O email informado e invalido';
-
-                elseif(Checa::checarCelular($formulario['celular'])):
-                    $conteudo['preencha_celular'] = 'O celular informado e invalido';
 
                 //verifica se o email ja existe no banco de conteudo
                 //chama o contrutor Usuarios
@@ -82,7 +87,7 @@ class UsuarioController extends Controller {
                     //armazena do $conteudo dentro do metodo armazenar()
                     if($this->usuarioModel->postUsuario($conteudo)):
                         Sessao::mensagem('usuario', 'Cadastro realizado com sucesso');
-                        Url::redirecionar('paginaController/login');
+                        Url::redirecionar('PaginaController/login');
 
                     else:
                         die("Erro ao armazenar usuario no banco de conteudo");
@@ -93,17 +98,20 @@ class UsuarioController extends Controller {
                 
             endif;
 
-            /*var_dump($formulario);*/
+            //var_dump($formulario);
+
         else:
             $conteudo = [
                 'nome' => '',
                 'email' => '',
                 'celular' => '',
+                'img' => '',
                 'senha' => '',
                 'confirmar_senha' => '',
                 'preencha_nome' => '',
                 'preencha_email' => '',
                 'preencha_celular' => '',
+                'preencha_img' => '',
                 'preencha_senha' => '',
                 'preencha_confirmar_senha' => ''
             ];
@@ -180,9 +188,10 @@ class UsuarioController extends Controller {
         $_SESSION['usuario_nome'] = $usuario->nome;
         $_SESSION['usuario_email'] = $usuario->email;
         $_SESSION['usuario_celular'] = $usuario->celular;
+        $_SESSION['usuario_img'] = $usuario->img;
         $_SESSION['usuario_senha'] = $usuario->senha;
 
-        Url::redirecionar('paginaController/home');
+        Url::redirecionar('PaginaController/home');
 
     }
 
@@ -191,11 +200,12 @@ class UsuarioController extends Controller {
         unset($_SESSION['usuario_nome']);
         unset($_SESSION['usuario_email']);
         unset($_SESSION['usuario_celular']);
+        unset($_SESSION['usuario_img']);
         unset($_SESSION['usuario_senha']);
 
         session_destroy();
 
-        Url::redirecionar('usuarioController/login');
+        Url::redirecionar('UsuarioController/login');
 
     }
 
@@ -207,6 +217,7 @@ class UsuarioController extends Controller {
                 'nome' => trim($formulario['nome']),
                 'email' => trim($formulario['email']),
                 'celular' => trim($formulario['celular']),
+                'img' => trim($formulario['img']),
                 'senha' => trim($formulario['senha'])
             ];
 
@@ -230,6 +241,12 @@ class UsuarioController extends Controller {
                     $conteudo['preencha_celular'] = ''; 
                 endif;
 
+                if(empty($formulario['img'])):
+                    $conteudo['preencha_img'] = 'Preencha o campo <b>IMG</b>';
+                else:
+                    $conteudo['preencha_img'] = ''; 
+                endif;
+
                 if(empty($formulario['senha'])):
                     $conteudo['preencha_senha'] = 'Preencha o campo <b>Senha</b><br>A senha deve ter no minimo 6 caracteres';
                 else:
@@ -243,9 +260,6 @@ class UsuarioController extends Controller {
                 elseif(Checa::checarEmail($formulario['email'])):
                     $conteudo['preencha_email'] = 'O email informado e invalido';
 
-                elseif(Checa::checarCelular($formulario['celular'])):
-                    $conteudo['preencha_celular'] = 'O celular informado e invalido';
-
                 elseif(strlen($formulario['senha']) < 6):
                     $conteudo['preencha_senha'] = 'A senha deve ter no minimo 6 caracteres';
 
@@ -254,7 +268,8 @@ class UsuarioController extends Controller {
                     
                     if($this->usuarioModel->putUsuario($conteudo)):
                         Sessao::mensagem('usuario', 'conteudo alterados com sucesso');
-                        Url::redirecionar('usuarios/logout');
+                        Url::redirecionar('UsuarioController/logout');
+                        
                     else:
                         die("Erro ao armazenar usuario no banco de conteudo");
 
@@ -270,7 +285,7 @@ class UsuarioController extends Controller {
 
             if($alterar->id != $_SESSION['usuario_id']):
                 Sessao::mensagem('usuario', 'Voce nao tem autorizacao para editar esse perfil');
-                Url::redirecionar('usuariosController/login');
+                Url::redirecionar('UsuarioController/login');
 
             endif;
 
@@ -279,10 +294,12 @@ class UsuarioController extends Controller {
                 'nome' => $alterar->nome,
                 'email' => $alterar->email,
                 'celular' => $alterar->celular,
+                'img' => $alterar->img,
                 'senha' => $alterar->senha,
                 'preencha_nome' => '',
                 'preencha_email' => '',
                 'preencha_celular' => '',
+                'preencha_img' => '',
                 'preencha_senha' => ''
             ];
             

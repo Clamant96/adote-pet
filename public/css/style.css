@@ -162,6 +162,37 @@ header .header .login-cadastro a:hover {
 
 }
 
+header .header .login-cadastro a img {
+    width: 60px;
+    height: auto;
+
+    border-radius: 50%;
+
+    border: 2px solid var(--background-color-green-escuro);
+
+}
+
+header .header .login-cadastro a svg {
+    padding: 10px;
+
+    width: 20px;
+    height: auto;
+
+    background-color: var(--background-color-gray);
+
+    border-radius: 5px;
+
+    transition: background-color, color, .3s ease-in-out;
+
+}
+
+header .header .login-cadastro a svg:hover {
+    background-color: var(--background-color-green-escuro);
+
+    color: var(--border-color-yellow);
+
+}
+
 header .header .login-cadastro .cadastro {
     border: 1px solid var(--text-color-green);
     border-radius: 5px;
@@ -440,5 +471,203 @@ section .animais-para-adocao .animal-doacao .conteudo p {
     font-weight: 500;
 
     color: var(--text-color-gray);
+
+}
+
+/* CADASTRO USUARIO */
+section .cadastro-login-usuario {
+    width: 30%;
+    height: auto;
+
+}
+
+section .cadastro-login-usuario form {
+    padding: 10% 5%;
+
+    width: 90%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: var(--background-color-white);
+
+    box-shadow: 0px 3px 5px -3px var(--box-shadow);
+
+    border-radius: 5px;
+
+}
+
+section .cadastro-login-usuario form h1 {
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-h1);
+    font-weight: 700;
+
+    color: var(--text-color-green);
+
+}
+
+section .cadastro-login-usuario form label {
+    width: 100%;
+    height: auto;
+
+}
+
+section .cadastro-login-usuario form label input {
+    padding: 5% 2%;
+
+    width: 96%;
+    height: auto;
+
+    border: none;
+
+    outline: none;
+
+    transition: border-bottom, .3s ease-in-out;
+
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 500;
+
+    color: var(--text-color-gray);
+
+    border-bottom: 2px solid transparent;
+
+}
+
+section .cadastro-login-usuario form label input:focus {
+    border-bottom: 2px solid var(--background-color-green-escuro);
+
+}
+
+section .cadastro-login-usuario form .botoes {
+    margin-top: 5%;
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+section .cadastro-login-usuario form .botoes button {
+    padding: 2% 5%;
+
+    background-color: var(--background-color-green);
+
+    color: var(--background-color-white);
+
+    border: none;
+
+    border-radius: 50px;
+
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 700;
+
+}
+
+section .cadastro-login-usuario form .botoes p {
+    margin-top: 7%;
+
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 700;
+
+    color: var(--text-color-gray);
+
+}
+
+section .cadastro-login-usuario form .botoes p a {
+    text-decoration: none;
+
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 700;
+
+    color: var(--text-color-green);
+
+    transition: color, .3s ease-in-out;
+
+}
+
+section .cadastro-login-usuario form .botoes p a:hover {
+    color: var(--text-color-gray);
+
+}
+
+/* PERFIL USUARIO */
+section .perfil-usuario {
+    padding: 0% 5%;
+
+    width: 60%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--background-color-white);
+
+    box-shadow: 0px 3px 5px -3px var(--box-shadow);
+
+    border-radius: 5px;
+
+}
+
+section .perfil-usuario .img {
+    width: 50%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+section .perfil-usuario .img img {
+    border-radius: 50%;
+
+    margin: 20%;
+    padding: 1%;
+
+    width: 60%;
+    height: auto;
+
+    border: 3px solid var(--background-color-green-escuro);
+
+}
+
+section .perfil-usuario .dados-usuario {
+    width: 50%;
+    height: auto;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+section .perfil-usuario .dados-usuario p {
+    padding: 1.5% 0%;
+
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-h2);
+    font-weight: 500;
+
+    color: var(--text-color-gray);
+
+}
+
+section .perfil-usuario .dados-usuario p strong {
+    font-weight: 600;
+
+    color: var(--text-color-green);
 
 }

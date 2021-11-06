@@ -26,11 +26,12 @@ class Usuario {
 
     /* POST USUARIO */
     public function postUsuario($dados) {
-        $this->conexao->query("INSERT INTO usuario(nome, email, celular, senha) VALUES (:nome, :email, :celular, :senha)");
+        $this->conexao->query("INSERT INTO usuario(nome, email, celular, img, senha) VALUES (:nome, :email, :celular, :img, :senha)");
         
         $this->conexao->bind("nome", $dados['nome']);
         $this->conexao->bind("email", $dados['email']);
         $this->conexao->bind("celular", $dados['celular']);
+        $this->conexao->bind("img", $dados['img']);
         $this->conexao->bind("senha", $dados['senha']);
 
         if($this->conexao->executa()):
@@ -42,12 +43,13 @@ class Usuario {
 
     /* PUT USUARIO */
     public function putUsuario($dados) {
-        $this->conexao->query("UPDATE usuario SET nome = :nome, email = :email, celular = :celular, senha = :senha WHERE id = :id");
+        $this->conexao->query("UPDATE usuario SET nome = :nome, email = :email, celular = :celular, img = :img ,senha = :senha WHERE id = :id");
         
         $this->conexao->bind("id", $dados['id']);
         $this->conexao->bind("nome", $dados['nome']);
         $this->conexao->bind("email", $dados['email']);
         $this->conexao->bind("celular", $dados['celular']);
+        $this->conexao->bind("img", $dados['img']);
         $this->conexao->bind("senha", $dados['senha']);
 
         if($this->conexao->executa()):
