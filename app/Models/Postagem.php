@@ -26,7 +26,7 @@ class Postagem {
 
     /* POST POSTAGEM */
     public function postPostagem($dados) {
-        $this->conexao->query("INSERT INTO postagem(nome, sexo, idade, porte, endereco, data_postagem, historia, img, disponibilidade) VALUES (:nome, :sexo, :idade, :porte, :endereco, :data_postagem, :historia, :img, :disponibilidade)");
+        $this->conexao->query("INSERT INTO postagem(nome, sexo, idade, porte, endereco, data_postagem, historia, img, disponibilidade, id_usuario, id_categoria) VALUES (:nome, :sexo, :idade, :porte, :endereco, :data_postagem, :historia, :img, :disponibilidade, :id_usuario, :id_categoria)");
         
         $this->conexao->bind("nome", $dados['nome']);
         $this->conexao->bind("sexo", $dados['sexo']);
@@ -37,6 +37,8 @@ class Postagem {
         $this->conexao->bind("historia", $dados['historia']);
         $this->conexao->bind("img", $dados['img']);
         $this->conexao->bind("disponibilidade", $dados['disponibilidade']);
+        $this->conexao->bind("id_usuario", $dados['id_usuario']);
+        $this->conexao->bind("id_categoria", $dados['id_categoria']);
 
         if($this->conexao->executa()):
             return true;
@@ -47,7 +49,7 @@ class Postagem {
 
     /* PUT POSTAGEM */
     public function putPostagem($dados) {
-        $this->conexao->query("UPDATE postagem SET nome = :nome, sexo = :sexo, idade = :idade, porte = :porte, endereco = :endereco, data_postagem = :data_postagem, historia = :historia, img = :img, disponibilidade = :disponibilidade WHERE id = :id");
+        $this->conexao->query("UPDATE postagem SET nome = :nome, sexo = :sexo, idade = :idade, porte = :porte, endereco = :endereco, data_postagem = :data_postagem, historia = :historia, img = :img, disponibilidade = :disponibilidade, id_usuario = :id_usuario, id_categoria = :id_categoria WHERE id = :id");
         
         $this->conexao->bind("id", $dados['id']);
         $this->conexao->bind("nome", $dados['nome']);
@@ -59,7 +61,9 @@ class Postagem {
         $this->conexao->bind("historia", $dados['historia']);
         $this->conexao->bind("img", $dados['img']);
         $this->conexao->bind("disponibilidade", $dados['disponibilidade']);
-
+        $this->conexao->bind("id_usuario", $dados['id_usuario']);
+        $this->conexao->bind("id_categoria", $dados['id_categoria']);
+        
         if($this->conexao->executa()):
             return true;
         else:

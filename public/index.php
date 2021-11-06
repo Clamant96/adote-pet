@@ -15,8 +15,8 @@ include './../app/autoload.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= APP_NOME ?></title>
-    <link rel="stylesheet" href="<?=URL?>/public/css/style.css" />
-    <link rel="stylesheet" href="<?=URL?>/public/css/style-modal-home-get-focus-animal.css" />
+    <link rel="stylesheet" href="<?= URL ?>/public/css/style.css" />
+    <link rel="stylesheet" href="<?= URL ?>/public/css/style-modal-home-get-focus-animal.css" />
     <link rel="shortcut icon" href="<?= URL ?>/img/logo-adote-pet.png" type="image/x-icon">
 </head>
 <body>

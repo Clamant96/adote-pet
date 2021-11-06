@@ -17,4 +17,10 @@ define('APP_EMAIL', 'neri.kevin96@gmail.com');
 
 define('APP_CEL', '(11) 9-7222-8292');
 
+define('INSTAGRAM', 'https://www.instagram.com/clmkevin/');
+
+define('YOUTUBE', 'https://www.youtube.com/channel/UCUWHuhvyOzq75xYIoP0e-nw');
+
+define('WHATSAPP', '(11) 9-9999-9999');
+
 const APP_VERSAO = '1.0.0';

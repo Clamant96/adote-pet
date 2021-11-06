@@ -4,7 +4,7 @@ class Database {
     private $host = 'localhost';
     private $usuario = 'root';
     private $senha = '';
-    private $banco = 'mvc';
+    private $banco = 'adote_pet_bd';
     private $porta = '3306';
     private $dbh;
     private $stmt;
