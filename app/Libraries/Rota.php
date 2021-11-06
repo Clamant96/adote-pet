@@ -6,8 +6,8 @@
 */
 class Rota {
     //atributos da classe
-    private $controlador = 'Paginas';
-    private $metodo = 'home';
+    private $controlador = 'PaginaController'; // DEFINE O CONTROLLER QUE SERA INICIALIZADO PRIMEIRO NA APLICACAO
+    private $metodo = 'home'; // DEFINE O METODO / VIEW QUE SERA APRESENTADA PRIMEIRO NA APLICACAO
     private $parametros = [];
 
     public function __construct() {

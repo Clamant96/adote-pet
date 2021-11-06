@@ -1,7 +1,7 @@
 <?php
 
 /* ROTEAMENTO PARA DIRECINAR AS PAGINAS DE CADA ITEM DO MENU */
-class Paginas extends Controller {
+class PaginaController extends Controller {
 
     public function __construct() {
         $this->categoriaModel = $this->model('Categoria');
