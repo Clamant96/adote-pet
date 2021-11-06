@@ -9,26 +9,33 @@ class PaginaController extends Controller {
         $this->usuarioModel = $this->model('Usuario');
     }
 
+    /* PAGINA HOME / INDEX */
     public function home() {
         $conteudo = [
-            'postagem' => $this->postagemModel->findAllPostagens()
+            'postagem' => $this->postagemModel->findAllPostagens(),
+            'nome' => '',
+            'preencha_nome' => ''
         ];
 
         $this->view('page/home', $conteudo);
     }
 
+    /* PAGINA COLABORE */
     public function colabore() {
         $this->view('page/colabore');
     }
 
+    /* PAGINA BLOG */
     public function blog() {
         $this->view('page/blog');
     }
 
+    /* PAGINA ABORTAR */
     public function adotar() {
         $this->view('page/adotar');
     }
 
+    /* PAGINA PERFIL USUARIO */
     public function perfil($id) {
         $conteudo = [
             'usuario' => $this->usuarioModel->findByUsuarioId($id)
@@ -37,6 +44,32 @@ class PaginaController extends Controller {
         $this->view('user/perfil', $conteudo);
     }
 
+    /* PAGINA CATEGORIA */
+    public function categoria() {
+        $conteudo = [
+            'nome' => '',
+            'preencha_nome' => '',
+            'categorias' => $this->categoriaModel->findAllCategorias()
+        ];
+
+        $this->view('categoria/categoria', $conteudo);
+    }
+
+    /* PAGINA CATEGORIA ID */
+    public function editarCategoria($id) {
+        $categoriaID = $this->categoriaModel->findByIdCategoria($id);
+
+        $conteudo = [
+            'id' => $categoriaID->id,
+            'nome' => $categoriaID->nome,
+            'preencha_nome' => '',
+            'categoria' => $this->categoriaModel->findByIdCategoria($id)
+        ];
+
+        $this->view('categoria/editar-categoria', $conteudo);
+    }
+
+    /* PAGINA LOGIN */
     public function login() {
         $conteudo = [
             'email' => '',
@@ -48,6 +81,7 @@ class PaginaController extends Controller {
         $this->view('user/login', $conteudo);
     }
 
+    /* PAGINA CADASTRO */
     public function cadastrar() {
         $conteudo = [
             'nome' => '',

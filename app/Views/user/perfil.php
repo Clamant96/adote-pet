@@ -1,12 +1,12 @@
 <section>
     <div class="perfil-usuario">
         <div class="img">
-            <img src="<?= $_SESSION['usuario_img'] ?>" alt="<?= $_SESSION['usuario_img'] ?>">
+            <img src="<?= $conteudo['usuario']->img ?>" alt="<?= $conteudo['usuario']->nome ?>">
         </div>
         <div class="dados-usuario">
-            <p><strong>Nome:</strong> <?= $_SESSION['usuario_nome'] ?></p>
-            <p><strong>E-mail:</strong> <?= $_SESSION['usuario_email'] ?></p>
-            <p><strong>Cel.:</strong> <?= $_SESSION['usuario_celular'] ?></p>
+            <p><strong>Nome:</strong> <?= $conteudo['usuario']->nome ?></p>
+            <p><strong>E-mail:</strong> <?= $conteudo['usuario']->email ?></p>
+            <p><strong>Cel.:</strong> <?= $conteudo['usuario']->celular ?></p>
         </div>
     </div>
 </section>
