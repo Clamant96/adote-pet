@@ -4,6 +4,7 @@ class UsuarioController extends Controller {
 
     public function __construct() {
         $this->usuarioModel = $this->model('Usuario');
+        $this->postagemModel = $this->model('Postagem');
     }
 
     public function cadastrar() {
@@ -312,7 +313,8 @@ class UsuarioController extends Controller {
     public function vizualizarPerfil($id) {
         
         $conteudo = [
-            'usuario' => $this->usuarioModel->findByUsuarioId($id)
+            'usuario' => $this->usuarioModel->findByUsuarioId($id),
+            'postagens' => $this->postagemModel->findAllPostagens()
         ];
 
         $this->view('user/perfil', $conteudo);

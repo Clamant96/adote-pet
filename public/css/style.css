@@ -382,13 +382,19 @@ section .animais-para-adocao .pesquisa-animal {
     width: 100%;
     height: auto;
 
+}
+
+section .animais-para-adocao .pesquisa-animal form {
+    width: 100%;
+    height: auto;
+
     display: flex;
     align-items: center;
     justify-content: center;
 
 }
 
-section .animais-para-adocao .pesquisa-animal input {
+section .animais-para-adocao .pesquisa-animal form input {
     padding: 2%;
 
     width: 96%;
@@ -409,7 +415,7 @@ section .animais-para-adocao .pesquisa-animal input {
 
 }
 
-section .animais-para-adocao .pesquisa-animal button {
+section .animais-para-adocao .pesquisa-animal form button {
     margin-left: 1%;
 
     width: 5%;
@@ -432,14 +438,14 @@ section .animais-para-adocao .pesquisa-animal button {
 
 }
 
-section .animais-para-adocao .pesquisa-animal button:hover {
+section .animais-para-adocao .pesquisa-animal form button:hover {
     background-color: var(--background-color-green-escuro);
 
     box-shadow: 0px 0px 0px 0px var(--box-shadow);
 
 }
 
-section .animais-para-adocao .pesquisa-animal button svg {
+section .animais-para-adocao .pesquisa-animal form button svg {
     padding: 25%;
 
     width: 50%;
@@ -719,9 +725,18 @@ section .cadastro-login-usuario form .botoes p a:hover {
 
 /* PERFIL USUARIO */
 section .perfil-usuario {
-    padding: 0% 5%;
+    width: 70%;
+    height: auto;
 
-    width: 60%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+section .perfil-usuario .dados-perfil {
+    width: 100%;
     height: auto;
 
     display: flex;
@@ -736,7 +751,7 @@ section .perfil-usuario {
 
 }
 
-section .perfil-usuario .img {
+section .perfil-usuario .dados-perfil .img {
     width: 50%;
     height: auto;
 
@@ -746,10 +761,10 @@ section .perfil-usuario .img {
 
 }
 
-section .perfil-usuario .img img {
+section .perfil-usuario .dados-perfil .img img {
     border-radius: 50%;
 
-    margin: 20%;
+    margin: 5%;
     padding: 1%;
 
     width: 45%;
@@ -759,7 +774,7 @@ section .perfil-usuario .img img {
 
 }
 
-section .perfil-usuario .dados-usuario {
+section .perfil-usuario .dados-perfil .dados-usuario {
     width: 50%;
     height: auto;
 
@@ -770,7 +785,7 @@ section .perfil-usuario .dados-usuario {
 
 }
 
-section .perfil-usuario .dados-usuario p {
+section .perfil-usuario .dados-perfil .dados-usuario p {
     padding: 1.5% 0%;
 
     font-family: var(--font-amaranth);
@@ -781,10 +796,89 @@ section .perfil-usuario .dados-usuario p {
 
 }
 
-section .perfil-usuario .dados-usuario p strong {
+section .perfil-usuario .dados-perfil .dados-usuario p strong {
     font-weight: 600;
 
     color: var(--text-color-green);
+
+}
+
+section .perfil-usuario .animal-doacao {
+    margin-top: 2%;
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+}
+
+section .perfil-usuario .animal-doacao .container {
+    width: 24%;
+    height: auto;
+
+    margin-bottom: 1%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: var(--background-color-white);
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadow);
+
+    border-radius: 5px;
+
+}
+
+section .perfil-usuario .animal-doacao .container .img {
+    width: 100%;
+    height: 40vh;
+
+    background-position: center;
+    background-size: 125%;
+    background-repeat: no-repeat;
+
+    border-radius: 5px 5px 0px 0px;
+
+    text-decoration: none;
+
+    transition: filter, .3s ease-in-out;
+
+}
+
+section .perfil-usuario .animal-doacao .container .img:hover {
+    filter: grayscale(90%);
+
+}
+
+section .perfil-usuario .animal-doacao .conteudo {
+    padding: 2% 5% 5% 5%;
+
+    width: 90%;
+    height: auto;
+
+}
+
+section .perfil-usuario .animal-doacao .conteudo h2 {
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-h2);
+    font-weight: 600;
+
+    color: var(--text-color-green);
+
+}
+
+section .perfil-usuario .animal-doacao .conteudo p {
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 500;
+
+    color: var(--text-color-gray);
 
 }
 

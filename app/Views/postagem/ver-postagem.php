@@ -23,7 +23,7 @@
                                 <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                             </svg>
                         </div>
-                        <p>Publicado por <a href="#"><?= $conteudo['usuario']->nome ?></a> em <?= date("Y-m-d", strtotime($conteudo['postagem']->data_postagem)); ?></p>
+                        <p>Publicado por <a href="<?= URL.'/UsuarioController/vizualizarPerfil/'.$_SESSION['usuario_id'] ?>"><?= $conteudo['usuario']->nome ?></a> em <?= date("Y-m-d", strtotime($conteudo['postagem']->data_postagem)); ?></p>
                     </div>
                     <div class="historia">
                         <?php if($conteudo['postagem']->sexo == 'macho'): ?>

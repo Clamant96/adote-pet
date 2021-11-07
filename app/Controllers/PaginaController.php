@@ -39,7 +39,8 @@ class PaginaController extends Controller {
     /* PAGINA PERFIL USUARIO */
     public function perfil($id) {
         $conteudo = [
-            'usuario' => $this->usuarioModel->findByUsuarioId($id)
+            'usuario' => $this->usuarioModel->findByUsuarioId($id),
+            'postagens' => $this->postagemModel->findAllPostagens(),
         ];
 
         $this->view('user/perfil', $conteudo);
