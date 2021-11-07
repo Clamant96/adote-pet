@@ -314,7 +314,7 @@ class UsuarioController extends Controller {
         
         $conteudo = [
             'usuario' => $this->usuarioModel->findByUsuarioId($id),
-            'postagens' => $this->postagemModel->findAllPostagens()
+            'postagens' => $this->postagemModel->findByIdUsuario($id)
         ];
 
         $this->view('user/perfil', $conteudo);
