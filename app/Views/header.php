@@ -8,7 +8,7 @@
                 <a href="<?= URL.'/page/home' ?>">Home</a>
                 <a href="<?= URL.'/page/colabore' ?>">Colabore</a>
                 <a href="<?= URL.'/page/blog' ?>">Blog</a>
-                <a href="<?= URL.'/user/perfil' ?>">Meu Perfil</a>
+                <a href="<?= URL.'/PaginaController/postagem' ?>">Nova postagem</a>
                 <a href="<?= URL.'/page/adotar' ?>" class="quero-adotar">Quero adota</a>
             </div>
         </nav>

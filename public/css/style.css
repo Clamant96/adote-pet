@@ -518,7 +518,7 @@ section .animais-para-adocao .animal-doacao {
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
 
     flex-wrap: wrap;
 
@@ -529,6 +529,7 @@ section .animais-para-adocao .animal-doacao .container {
     height: auto;
 
     margin-bottom: 1.33%;
+    margin-right: 1%;
 
     display: flex;
     align-items: center;
@@ -545,21 +546,21 @@ section .animais-para-adocao .animal-doacao .container {
 
 section .animais-para-adocao .animal-doacao .container .img {
     width: 100%;
-    height: auto;
+    height: 40vh;
 
-}
-
-section .animais-para-adocao .animal-doacao .container .img img {
-    width: 100%;
-    height: auto;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
 
     border-radius: 5px 5px 0px 0px;
+
+    text-decoration: none;
 
     transition: filter, .3s ease-in-out;
 
 }
 
-section .animais-para-adocao .animal-doacao .container .img img:hover {
+section .animais-para-adocao .animal-doacao .container .img:hover {
     filter: grayscale(90%);
 
 }
@@ -787,6 +788,7 @@ section .perfil-usuario .dados-usuario p strong {
 
 }
 
+/* CATEGORIA */
 section .categoria {
     width: 70%;
     height: auto;
@@ -1001,5 +1003,523 @@ section .categoria .categorias-existentes .container .botoes .excluir:hover {
     background-color: var(--background-color-excluir);
 
     color: var(--text-color-white);
+
+}
+
+/* POSTAGEM */
+section .postagem {
+    width: 70%;
+    height: auto;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+}
+
+section .postagem .painel-postagem {
+    padding: 3%;
+
+    width: 64%;
+    height: auto;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+    background-color: var(--background-color-white);
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadow);
+
+    border-radius: 5px;
+    
+}
+
+section .postagem .painel-postagem p {
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-h1);
+    font-weight: 700;
+
+    color: var(--text-color-green);
+
+}
+
+section .postagem .painel-postagem form {
+    margin-top: 4%;
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+section .postagem .painel-postagem form label {
+    width: 100%;
+    height: auto;
+
+}
+
+section .postagem .painel-postagem form label input {
+    padding: 2%;
+
+    width: 96%;
+    height: auto;
+
+    border: none;
+
+    outline: none;
+
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 500;
+
+    color: var(--text-color-gray);
+
+}
+
+section .postagem .painel-postagem form label select {
+    padding: 2% 1%;
+
+    width: 96%;
+    height: auto;
+
+    border: none;
+
+    outline: none;
+
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 500;
+
+    color: var(--text-color-gray);
+
+}
+
+section .postagem .painel-postagem form label textarea {
+    padding: 2%;
+
+    width: 96%;
+    height: 10vh;
+
+    border: none;
+
+    outline: none;
+
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 500;
+
+    color: var(--text-color-gray);
+
+}
+
+section .postagem .painel-postagem form button {
+    padding: 1.5% 6%;
+
+    border: none;
+    border-radius: 50px;
+
+    outline: none;
+
+    background-color: var(--background-color-green);
+
+    color: var(--text-color-white);
+
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 500;
+
+    transition: background-color, .3s ease-in-out;
+
+}
+
+section .postagem .painel-postagem form button:hover {
+    background-color: var(--background-color-green-escuro);
+
+}
+
+section .postagem .categorias-existentes {
+    width: 48%;
+    height: auto;
+
+}
+
+section .postagem .categorias-existentes .container {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+    flex-wrap: wrap;
+
+}
+
+section .postagem .categorias-existentes .container .nome {
+    padding: 2%;
+
+    width: 56%;
+    height: auto;
+
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 500;
+
+    color: var(--text-color-green);
+
+}
+
+section .postagem .categorias-existentes .container .botoes {
+    padding: 2%;
+
+    width: 36%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+section .postagem .categorias-existentes .container .botoes a {
+    padding: 3% 6%;
+
+    border: none;
+    border-radius: 5px;
+
+    outline: none;
+
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 500;
+
+    color: var(--text-color-green);
+
+    background-color: var(--background-color-gray);
+
+    text-decoration: none;
+
+    transition: background-color, color, .3s ease-in-out;
+
+}
+
+section .postagem .categorias-existentes .container .botoes .editar:hover {
+    background-color: var(--background-color-editar);
+
+    color: var(--text-color-white);
+
+}
+
+section .postagem .categorias-existentes .container .botoes .excluir:hover {
+    background-color: var(--background-color-excluir);
+
+    color: var(--text-color-white);
+
+}
+
+/* TESTE */
+section .postagem .minhas-postagem {
+    padding: 2%;
+    margin: 0% 1% 0% 0%;
+
+    width: 24%;
+    height: auto;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    background-color: var(--background-color-white);
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadow);
+
+    border-radius: 5px;
+
+}
+
+section .postagem .minhas-postagem .titulo-minhas-postagens {
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-h2);
+    font-weight: 700;
+
+    color: var(--text-color-green);
+
+}
+
+section .postagem .minhas-postagem .novo-item {
+    width: 100%;
+    height: auto;
+
+}
+
+section .postagem .minhas-postagem .novo-item a {
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 600;
+
+    color: var(--text-color-gray);
+
+    text-decoration: none;
+
+    transition: color, .3s ease-in-out;
+
+}
+
+section .postagem .minhas-postagem .novo-item a:hover {
+    color: var(--text-color-green);
+
+}
+
+/* VER POSTAGEM */
+section .ver-postagem {
+    width: 70%;
+    height: auto;
+
+    background-color: var(--background-color-white);
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadow);
+
+    border-radius: 5px;
+
+}
+
+section .ver-postagem .animal-focus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: auto;
+
+}
+
+section .ver-postagem .animal-focus .img {
+    width: 50%;
+    height: 70vh;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    border-radius: 5px 0px 0px 5px;
+
+}
+
+section .ver-postagem .animal-focus .dados-animal {
+    padding: 2%;
+
+    width: 46%;
+    height: 61vh;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+section .ver-postagem .animal-focus .dados-animal .nome-e-categoria-animal {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+    height: auto;
+
+}
+
+section .ver-postagem .animal-focus .dados-animal .nome-e-categoria-animal h2 {
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-h2);
+    font-weight: 600;
+
+    color: var(--text-color-green);
+
+}
+
+section .ver-postagem .animal-focus .dados-animal .nome-e-categoria-animal p {
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 500;
+
+    color: var(--text-color-gray);
+
+}
+
+section .ver-postagem .animal-focus .dados-animal .endereco-publicado-por {
+    position: relative;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+    height: auto;
+
+    margin-top: 5%;
+
+}
+
+section .ver-postagem .animal-focus .dados-animal .endereco-publicado-por .dados {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+section .ver-postagem .animal-focus .dados-animal .endereco-publicado-por .dados .icone {
+    width: 4%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 2%;
+    margin-top: 0.5%;
+
+}
+
+section .ver-postagem .animal-focus .dados-animal .endereco-publicado-por .dados .icone svg {
+    width: 100%;
+    height: auto;
+
+    color: var(--background-color-green-escuro);
+
+}
+
+section .ver-postagem .animal-focus .dados-animal .endereco-publicado-por .dados p {
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 500;
+
+    color: var(--text-color-gray);
+
+}
+
+section .ver-postagem .animal-focus .dados-animal .endereco-publicado-por .dados p a {
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 500;
+
+    color: var(--text-color-green);
+
+    text-decoration: none;
+
+}
+
+section .ver-postagem .animal-focus .dados-animal .endereco-publicado-por .historia {
+    margin-top: 5%;
+    margin-bottom: 2.5%;
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+section .ver-postagem .animal-focus .dados-animal .endereco-publicado-por .historia p {
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 500;
+
+    color: var(--text-color-gray);
+
+}
+
+section .ver-postagem .animal-focus .dados-animal .endereco-publicado-por .historia p strong {
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 600;
+
+    color: var(--text-color-green);
+    
+}
+
+section .ver-postagem .animal-focus .dados-animal .endereco-publicado-por .dados-responsavel {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+section .ver-postagem .animal-focus .dados-animal .endereco-publicado-por .dados-responsavel p {
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 500;
+
+    color: var(--text-color-gray);
+
+}
+
+section .ver-postagem .animal-focus .dados-animal .endereco-publicado-por .dados-responsavel p strong {
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 600;
+
+    color: var(--text-color-green);
+    
+}
+
+section .ver-postagem .animal-focus .dados-animal .endereco-publicado-por .adotar {
+    position: absolute;
+
+    margin-top: 100%;
+
+    padding: 2% 5%;
+
+    width: 90%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    flex-wrap: wrap;
+
+}
+
+section .ver-postagem .animal-focus .dados-animal .endereco-publicado-por .adotar a {
+    padding: 2% 5%;
+
+    width: 25%;
+    height: auto;
+
+    border-radius: 50px;
+
+    background-color: var(--background-color-green);
+
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 600;
+
+    color: var(--text-color-white);
+
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }

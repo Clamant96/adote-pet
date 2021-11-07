@@ -3,8 +3,8 @@
 class Database {
     private $host = 'localhost';
     private $usuario = 'root';
-    private $senha = '< senha >'; 
-    private $banco = '< nome_banco >'; 
+    private $senha = '< senha >'; // < senha >
+    private $banco = '< nome_banco >'; // < nome_banco >
     private $porta = '3306';
     private $dbh;
     private $stmt;

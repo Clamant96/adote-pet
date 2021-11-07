@@ -12,9 +12,10 @@ class PaginaController extends Controller {
     /* PAGINA HOME / INDEX */
     public function home() {
         $conteudo = [
-            'postagem' => $this->postagemModel->findAllPostagens(),
+            'postagens' => $this->postagemModel->findAllPostagens(),
+            'categorias' => $this->categoriaModel->findAllCategorias(),
             'nome' => '',
-            'preencha_nome' => ''
+            'preencha_nome' => '',
         ];
 
         $this->view('page/home', $conteudo);
@@ -42,6 +43,37 @@ class PaginaController extends Controller {
         ];
 
         $this->view('user/perfil', $conteudo);
+    }
+
+    public function postagem() {
+        $conteudo = [
+            'nome' => '', 
+            'sexo' => '', 
+            'idade' => '', 
+            'porte' => '', 
+            'endereco' => '', 
+            'data_postagem' => '', 
+            'historia' => '', 
+            'img' => '', 
+            'disponibilidade' => '', 
+            'id_usuario' => '', 
+            'id_categoria' => '',
+            'preencha_nome' => '', 
+            'preencha_sexo' => '', 
+            'preencha_idade' => '', 
+            'preencha_porte' => '', 
+            'preencha_endereco' => '', 
+            'preencha_data_postagem' => '', 
+            'preencha_historia' => '', 
+            'preencha_img' => '', 
+            'preencha_disponibilidade' => '', 
+            'preencha_id_usuario' => '', 
+            'preencha_id_categoria' => '',
+            'categorias' => $this->categoriaModel->findAllCategorias(),
+            'postagens' => $this->postagemModel->findByIdUsuario($_SESSION['usuario_id'])
+        ];
+
+        $this->view('postagem/postagem', $conteudo);
     }
 
     /* PAGINA CATEGORIA */

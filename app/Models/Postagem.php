@@ -24,6 +24,14 @@ class Postagem {
         return $this->conexao->resultado();
     }
 
+    /* GET BY ID USUARIO */
+    public function findByIdUsuario($id) {
+        $this->conexao->query("SELECT * FROM postagem WHERE id_usuario = :id_usuario");
+        $this->conexao->bind('id_usuario', $id); 
+
+        return $this->conexao->resultados();
+    }
+
     /* POST POSTAGEM */
     public function postPostagem($dados) {
         $this->conexao->query("INSERT INTO postagem(nome, sexo, idade, porte, endereco, data_postagem, historia, img, disponibilidade, id_usuario, id_categoria) VALUES (:nome, :sexo, :idade, :porte, :endereco, :data_postagem, :historia, :img, :disponibilidade, :id_usuario, :id_categoria)");

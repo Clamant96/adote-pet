@@ -1,3 +1,11 @@
+<?php
+    $idCategoria = 'Categorias';
+
+    if(isset($_POST["nome"])){
+        $idCategoria=$_POST["nome"];
+        //echo "select nome is => ".$idCategoria;
+    }
+?>
 <section>
     <div class="animais-para-adocao">
         <div class="pesquisa-animal">
@@ -11,22 +19,32 @@
         <div class="select-animais">
             <p><a href="<?= URL.'/PaginaController/categoria' ?>">Nova categoria</a><p>
             <h2>Selecionar tipo</h2>
-            <select name="select">
-                <option value="valor1">Valor 1</option>
-                <option value="valor2" selected>Valor 2</option>
-                <option value="valor3">Valor 3</option>
-            </select>
+            <form method="POST" action="">
+                <select name="nome" onchange="this.form.submit()" >
+                    <option value="" disabled selected><?= $idCategoria ?></option>
+                    <option value="Todas" >Todas</option>
+                    <?php foreach($conteudo['categorias'] as $categoria): ?>
+                        <option value="<?= $categoria->id ?>">
+                            <?= $categoria->nome ?>
+                        </option>
+                    <?php endforeach ?>
+                </select>
+            </form>
         </div>
+        <!-- NAO ESQUECER QUE AGORA PRECISAMOS CRIAR O COMPONENTE DE POSTAGENS E INCLUIR O IF, PARA QUANDO A OPCAO DO SELECT FOR SELECIONADA FILTRAR SOMENTE OS DADOS DA CATEGORIA DETERMINADA NO SELECT PELO USUARIO -->
         <div class="animal-doacao">
-            <div id="modalAnimal" class="container">
-                <div class="img">
-                    <img src="https://cdn.amigonaosecompra.com.br/1176x0/9c04f6ea-621a-4ba0-b97d-0161e0659730/47e56845-b1c6-4798-9ae0-1b25eda14347/47e56845-b1c6-4798-9ae0-1b25eda14347.jpeg?v=63803108619" alt="Frufru linda">
+            <?php foreach($conteudo['postagens'] as $postagem): ?>
+                <?php if($postagem->id_categoria == $idCategoria || $idCategoria == 'Categorias' || $idCategoria == 'Todas'): ?>
+                <div id="modalAnimal" class="container">
+                    <a href="<?= URL.'/PostagemController/verPostagem/'.$postagem->id?>" class="img" style="background-image: url(<?= $postagem->img ?>);"> 
+                    </a>
+                    <div class="conteudo">
+                        <h2><?= $postagem->nome ?></h2>
+                        <p><?= $postagem->endereco ?></p>
+                    </div>
                 </div>
-                <div class="conteudo">
-                    <h2>Frufru linda</h2>
-                    <p>São Paulo, São Paulo</p>
-                </div>
-            </div>
+                <?php endif; ?>
+            <?php endforeach ?>
         </div>
     </div>
 </section>
