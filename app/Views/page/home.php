@@ -1,9 +1,17 @@
 <?php
     $idCategoria = 'Categorias';
+    $nomeCategoria = 'Categorias';
 
     if(isset($_POST["nome"])){
         $idCategoria=$_POST["nome"];
         //echo "select nome is => ".$idCategoria;
+    }
+
+    foreach($conteudo['categorias'] as $categoria) {
+        if($categoria->id == $idCategoria) {
+            $nomeCategoria = $categoria->nome;    
+        }
+
     }
 ?>
 <section>
@@ -17,11 +25,13 @@
             </button>
         </div>
         <div class="select-animais">
-            <p><a href="<?= URL.'/PaginaController/categoria' ?>">Nova categoria</a><p>
+            <?php if(isset($_SESSION['usuario_id'])): ?>
+                <p><a href="<?= URL.'/PaginaController/categoria' ?>">Nova categoria</a><p>
+            <?php endif; ?>
             <h2>Selecionar tipo</h2>
             <form method="POST" action="">
                 <select name="nome" onchange="this.form.submit()" >
-                    <option value="" disabled selected><?= $idCategoria ?></option>
+                    <option value="" disabled selected><?= $nomeCategoria ?></option>
                     <option value="Todas" >Todas</option>
                     <?php foreach($conteudo['categorias'] as $categoria): ?>
                         <option value="<?= $categoria->id ?>">

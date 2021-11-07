@@ -15,7 +15,7 @@ class PaginaController extends Controller {
             'postagens' => $this->postagemModel->findAllPostagens(),
             'categorias' => $this->categoriaModel->findAllCategorias(),
             'nome' => '',
-            'preencha_nome' => '',
+            'preencha_nome' => ''
         ];
 
         $this->view('page/home', $conteudo);

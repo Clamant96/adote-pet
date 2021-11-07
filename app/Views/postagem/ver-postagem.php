@@ -38,8 +38,10 @@
                         <p><strong>Ce.: </strong> <?= $conteudo['usuario']->celular ?></p>
                     </div>
                     <div class="adotar">
+                        <?php if(isset($_SESSION['usuario_id'])): ?>
                         <a href="#">Adotar</a>
                         <a href="#">Contribuir</a>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>

@@ -1,3 +1,8 @@
+<?php
+    if(!isset($_SESSION['usuario_id'])) {
+        header('Location: '.URL.'/user/login');
+    }
+?>
 <section>
     <div class="postagem">
         <div class="painel-postagem">
