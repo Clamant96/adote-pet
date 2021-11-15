@@ -1,0 +1,1636 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* GLOBAL */
+html, body {
+    height: 100vh;
+
+    font-family: var(--font-titillium-web);
+
+    background-color: var(--background-white);
+
+}
+
+:root {
+    --font-titillium-web: 'Titillium Web', sans-serif;
+    --font-amaranth: 'Amaranth', sans-serif;
+
+    --text-color-white: #f1f1f1;
+    --text-color-yellow: #D7B007;
+    --text-color-green: #00463F;
+    --text-color-gray: #757575;
+
+    --background-color-yellow: #D7B007;
+    --background-color-white: #FFFFFF;
+    --background-white: #f1f1f1;
+    --background-color-green: #00463F;
+    --background-color-green-escuro: #133935;
+    --background-footer-copy: #191919;
+    --background-color-gray: #DCDCDC;
+    --background-color-excluir: #ca0707;
+    --background-color-editar: #00463F;
+
+    --border-color-yellow: #D7B007;
+
+    --font-size-header: 18px;
+    --font-size-select: 13px;
+    --font-size-select-menu: 16px;
+    --font-size-botao: 13px;
+    --font-size-h1: 45px;
+    --font-size-h2: 25px;
+    --font-size-nome-animal-h2: 20px;
+    --font-size-nome-animal-p: 16px;
+    --font-size-copy: 14px;
+    --font-size-footer: 14px;
+    --font-size-search: 14px;
+
+    --box-shadow: #26262690;
+
+}
+
+/* MENU */
+header {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--background-color-white);
+
+    box-shadow: 0px 3px 10px -10px var(--box-shadow);
+
+}
+
+header .header {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+header .header .img {
+    width: 50%;
+    height: auto;
+
+}
+
+header .header .img img {
+    width: 100%;
+    height: auto;
+
+}
+
+header .header nav {
+    width: 100%;
+    height: auto;
+
+    position: absolute;
+
+    margin-top: -150%;
+
+}
+
+header .header nav .menu {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+header .header nav .menu a {
+    padding: 1% 2%;
+
+    font-weight: 600;
+
+    color: var(--text-color-green);
+
+    text-decoration: none;
+
+    transition: color, .3s ease-in-out;
+
+}
+
+header .header nav .menu a:hover {
+    color: var(--text-color-yellow);
+
+}
+
+header .header nav .menu .quero-adotar {
+    border: 1px solid var(--text-color-green);
+    border-radius: 5px;
+
+}
+
+header .header nav .menu .quero-adotar:hover {
+    background-color: var(--background-color-green-escuro);
+
+    color: var(--text-color-white);
+
+}
+
+header .header .login-cadastro {
+    padding: 2%;
+
+    width: 96%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+header .header .login-cadastro a {
+    padding: 2% 5%;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    color: var(--text-color-green);
+
+    transition: color, .3s ease-in-out;
+
+}
+
+header .header .login-cadastro a:hover {    
+    color: var(--text-color-yellow);
+
+}
+
+header .header .login-cadastro a img {
+    width: 60px;
+    height: auto;
+
+    border-radius: 50%;
+
+    border: 2px solid var(--background-color-green-escuro);
+
+}
+
+header .header .login-cadastro .logout {
+    padding: 4% 7%;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    color: var(--text-color-green) !important;
+
+}
+
+header .header .login-cadastro .logout svg {
+    padding: 10px;
+
+    width: 15px;
+    height: auto;
+
+    border: 1px solid var(--background-color-green-escuro);
+
+    border-radius: 5px;
+
+    transition: background-color, color, .3s ease-in-out;
+
+}
+
+header .header .login-cadastro .logout svg:hover {
+    background-color: var(--background-color-green-escuro);
+
+    color: var(--text-color-white);
+
+}
+
+header .header .login-cadastro .cadastro {
+    border: 1px solid var(--text-color-green);
+    border-radius: 5px;
+
+    background-color: var(--background-color-green-escuro);
+
+    color: var(--text-color-white);
+
+    transition: border, background-color, color, .3s ease-in-out;
+
+}
+
+header .header .login-cadastro .cadastro:hover {
+    border: 1px solid var(--text-color-green);
+    border-radius: 5px;
+
+    background-color: transparent;
+
+    color: var(--text-color-green);
+
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    height: auto;
+
+    background-color: var(--background-color-green-escuro);
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+footer .img {
+    width: 90%;
+    height: auto;
+
+}
+
+footer .img img {
+    width: 100%;
+    height: auto;
+
+}
+
+footer nav {
+    width: 95%;
+    height: auto;
+
+    margin-top: 2.5%;
+
+}
+
+footer nav h2 {
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-h2);
+
+    color: var(--background-color-gray);
+
+    text-align: center;
+
+}
+
+footer nav .menu {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+footer nav .menu a {
+    text-decoration: none;
+
+    color: var(--background-color-gray);
+
+}   
+
+footer nav .menu .redes-sociais {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    width: 70%;
+    height: auto;
+
+    margin-bottom: 5%;
+
+}
+
+footer nav .menu .redes-sociais a {
+    background-color: var(--background-color-gray);
+
+    padding: 5%;
+    margin: 5% 0% 0% 0%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+}
+
+footer nav .menu .redes-sociais a svg {
+    color: var(--background-color-green-escuro);
+
+    width: 25px;
+    height: auto;
+
+}
+
+.copy {
+    padding: 2%;
+
+    width: 96%;
+    height: auto;
+
+    background-color: var(--background-footer-copy);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: var(--font-size-copy);
+    font-family: var(--font-amaranth);
+    font-weight: 600;
+
+    color: var(--text-color-white);
+
+}
+
+.copy a {
+    text-decoration: none;
+
+    font-size: var(--font-size-copy);
+    font-family: var(--font-amaranth);
+    font-weight: 600;
+
+    color: var(--text-color-white);
+
+    margin-left: 0.5%;
+
+}
+
+/* SECTION */
+section {
+    margin: 2% 0%;
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* SECTION HOME */
+section .animais-para-adocao {
+    width: 94%;
+    height: auto;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+}
+
+section .animais-para-adocao .pesquisa-animal {
+    padding: 0% 0% 2% 0%;
+
+    width: 100%;
+    height: auto;
+
+}
+
+section .animais-para-adocao .pesquisa-animal form {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+section .animais-para-adocao .pesquisa-animal form input {
+    padding: 2%;
+
+    width: 96%;
+    height: auto;
+
+    border: none;
+
+    border-radius: 5px;
+
+    outline: none;
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadow);
+
+    font-size: var(--font-size-search);
+    font-weight: 500;
+
+    color: var(--text-color-green);
+
+}
+
+section .animais-para-adocao .pesquisa-animal form button {
+    margin-left: 1%;
+
+    width: 5%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 5px;
+
+    outline: none;
+
+    background-color: var(--background-color-green);
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadow);
+
+    transition: background-color, .3s ease-in-out;
+
+}
+
+section .animais-para-adocao .pesquisa-animal form button:hover {
+    background-color: var(--background-color-green-escuro);
+
+    box-shadow: 0px 0px 0px 0px var(--box-shadow);
+
+}
+
+section .animais-para-adocao .pesquisa-animal form button svg {
+    padding: 25%;
+
+    width: 50%;
+    height: auto;
+
+    color: var(--text-color-white);
+
+}
+
+section .animais-para-adocao .select-animais {
+    padding: 5%;
+
+    width: 90%;
+    height: auto;
+
+    background-color: var(--background-color-white);
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadow);
+
+    border-radius: 5px;
+
+    margin-top: 3%;
+
+}
+
+section .animais-para-adocao .select-animais h2 {
+    font-size: var(--font-size-h2);
+    font-weight: 700;
+
+    width: 100%;
+    height: auto;
+
+    color: var(--text-color-green);
+
+}
+
+section .animais-para-adocao .select-animais select {
+    border: none;
+
+    width: 100%;
+    height: auto;
+
+    outline: none;
+
+    color: var(--text-color-green);
+
+}
+
+section .animais-para-adocao .select-animais p {
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 500;
+
+    margin: 3% 0%;
+
+    width: 94%;
+    height: auto;
+
+}
+
+section .animais-para-adocao .select-animais p a {
+    text-decoration: none;
+
+    color: var(--text-color-gray);
+
+    transition: color, .3s ease-in-out;
+
+}
+
+section .animais-para-adocao .select-animais p a:hover {
+    color: var(--text-color-green);
+
+}
+
+section .animais-para-adocao .animal-doacao {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    margin-top: 5%;
+
+}
+
+section .animais-para-adocao .animal-doacao .container {
+    width: 100%;
+    height: auto;
+
+    margin-bottom: 3%;
+    margin-right: 0%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: var(--background-color-white);
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadow);
+
+    border-radius: 5px;
+
+}
+
+section .animais-para-adocao .animal-doacao .container .img {
+    width: 100%;
+    height: 40vh;
+
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    border-radius: 5px 5px 0px 0px;
+
+    text-decoration: none;
+
+    transition: filter, .3s ease-in-out;
+
+}
+
+section .animais-para-adocao .animal-doacao .container .img:hover {
+    filter: grayscale(90%);
+
+}
+
+section .animais-para-adocao .animal-doacao .conteudo {
+    padding: 2% 5% 5% 5%;
+
+    width: 90%;
+    height: auto;
+
+}
+
+section .animais-para-adocao .animal-doacao .conteudo h2 {
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-h2);
+    font-weight: 600;
+
+    color: var(--text-color-green);
+
+}
+
+section .animais-para-adocao .animal-doacao .conteudo p {
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 500;
+
+    color: var(--text-color-gray);
+
+}
+
+/* CADASTRO USUARIO */
+section .cadastro-login-usuario {
+    width: 30%;
+    height: auto;
+
+}
+
+section .cadastro-login-usuario form {
+    padding: 10% 5%;
+
+    width: 90%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: var(--background-color-white);
+
+    box-shadow: 0px 3px 5px -3px var(--box-shadow);
+
+    border-radius: 5px;
+
+}
+
+section .cadastro-login-usuario form h1 {
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-h1);
+    font-weight: 700;
+
+    color: var(--text-color-green);
+
+}
+
+section .cadastro-login-usuario form label {
+    width: 100%;
+    height: auto;
+
+}
+
+section .cadastro-login-usuario form label input {
+    padding: 5% 2%;
+
+    width: 96%;
+    height: auto;
+
+    border: none;
+
+    outline: none;
+
+    transition: border-bottom, .3s ease-in-out;
+
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 500;
+
+    color: var(--text-color-gray);
+
+    border-bottom: 2px solid transparent;
+
+}
+
+section .cadastro-login-usuario form label input:focus {
+    border-bottom: 2px solid var(--background-color-green-escuro);
+
+}
+
+section .cadastro-login-usuario form .botoes {
+    margin-top: 5%;
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+section .cadastro-login-usuario form .botoes button {
+    padding: 2% 5%;
+
+    background-color: var(--background-color-green);
+
+    color: var(--background-color-white);
+
+    border: none;
+
+    border-radius: 50px;
+
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 700;
+
+}
+
+section .cadastro-login-usuario form .botoes p {
+    margin-top: 7%;
+
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 700;
+
+    color: var(--text-color-gray);
+
+}
+
+section .cadastro-login-usuario form .botoes p a {
+    text-decoration: none;
+
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 700;
+
+    color: var(--text-color-green);
+
+    transition: color, .3s ease-in-out;
+
+}
+
+section .cadastro-login-usuario form .botoes p a:hover {
+    color: var(--text-color-gray);
+
+}
+
+/* PERFIL USUARIO */
+section .perfil-usuario {
+    width: 70%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+section .perfil-usuario .dados-perfil {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--background-color-white);
+
+    box-shadow: 0px 3px 5px -3px var(--box-shadow);
+
+    border-radius: 5px;
+
+}
+
+section .perfil-usuario .dados-perfil .img {
+    width: 50%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+section .perfil-usuario .dados-perfil .img img {
+    border-radius: 50%;
+
+    margin: 5%;
+    padding: 1%;
+
+    width: 45%;
+    height: auto;
+
+    border: 3px solid var(--background-color-green-escuro);
+
+}
+
+section .perfil-usuario .dados-perfil .dados-usuario {
+    width: 50%;
+    height: auto;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+section .perfil-usuario .dados-perfil .dados-usuario p {
+    padding: 1.5% 0%;
+
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-h2);
+    font-weight: 500;
+
+    color: var(--text-color-gray);
+
+}
+
+section .perfil-usuario .dados-perfil .dados-usuario p strong {
+    font-weight: 600;
+
+    color: var(--text-color-green);
+
+}
+
+section .perfil-usuario .animal-doacao {
+    margin-top: 2%;
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+}
+
+section .perfil-usuario .animal-doacao .container {
+    width: 24%;
+    height: auto;
+
+    margin-bottom: 1%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: var(--background-color-white);
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadow);
+
+    border-radius: 5px;
+
+}
+
+section .perfil-usuario .animal-doacao .container .img {
+    width: 100%;
+    height: 40vh;
+
+    background-position: center;
+    background-size: 125%;
+    background-repeat: no-repeat;
+
+    border-radius: 5px 5px 0px 0px;
+
+    text-decoration: none;
+
+    transition: filter, .3s ease-in-out;
+
+}
+
+section .perfil-usuario .animal-doacao .container .img:hover {
+    filter: grayscale(90%);
+
+}
+
+section .perfil-usuario .animal-doacao .conteudo {
+    padding: 2% 5% 5% 5%;
+
+    width: 90%;
+    height: auto;
+
+}
+
+section .perfil-usuario .animal-doacao .conteudo h2 {
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-h2);
+    font-weight: 600;
+
+    color: var(--text-color-green);
+
+}
+
+section .perfil-usuario .animal-doacao .conteudo p {
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 500;
+
+    color: var(--text-color-gray);
+
+}
+
+/* CATEGORIA */
+section .categoria {
+    width: 70%;
+    height: auto;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+    padding: 2%;
+
+    background-color: var(--background-color-white);
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadow);
+
+    border-radius: 5px;
+
+}
+
+section .categoria .paginacao {
+    margin-bottom: 2.5%;
+
+    width: 100%;
+    height: auto;
+
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-select-menu);
+    font-weight: 500;
+
+    color: var(--text-color-gray);
+
+}
+
+section .categoria .paginacao a {
+    text-decoration: none;
+
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-select-menu);
+    font-weight: 500;
+
+    color: var(--text-color-gray);
+
+    transition: color, .3s ease-in-out;
+
+}
+
+section .categoria .paginacao a:hover {
+    color: var(--text-color-green);
+
+}
+
+section .categoria .painel-categoria {
+    padding: 0% 2% 2% 2%;
+
+    width: 46%;
+    height: auto;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+}
+
+section .categoria .painel-categoria p {
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-h1);
+    font-weight: 700;
+
+    color: var(--text-color-green);
+
+}
+
+section .categoria .painel-categoria form {
+    margin-top: 4%;
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+section .categoria .painel-categoria form label {
+    width: 100%;
+    height: auto;
+
+}
+
+section .categoria .painel-categoria form label input {
+    padding: 2%;
+
+    width: 96%;
+    height: auto;
+
+    border: none;
+
+    outline: none;
+
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 500;
+
+    color: var(--text-color-green);
+
+}
+
+section .categoria .painel-categoria form button {
+    padding: 2% 5%;
+
+    border: none;
+    border-radius: 50px;
+
+    outline: none;
+
+    background-color: var(--background-color-green);
+
+    color: var(--text-color-white);
+
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 500;
+
+    transition: background-color, .3s ease-in-out;
+
+}
+
+section .categoria .painel-categoria form button:hover {
+    background-color: var(--background-color-green-escuro);
+
+}
+
+section .categoria .categorias-existentes {
+    width: 48%;
+    height: auto;
+
+}
+
+section .categoria .categorias-existentes .container {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+    flex-wrap: wrap;
+
+}
+
+section .categoria .categorias-existentes .container .nome {
+    padding: 2%;
+
+    width: 56%;
+    height: auto;
+
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 500;
+
+    color: var(--text-color-green);
+
+}
+
+section .categoria .categorias-existentes .container .botoes {
+    padding: 2%;
+
+    width: 36%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+section .categoria .categorias-existentes .container .botoes a {
+    padding: 3% 6%;
+
+    border: none;
+    border-radius: 5px;
+
+    outline: none;
+
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 500;
+
+    color: var(--text-color-green);
+
+    background-color: var(--background-color-gray);
+
+    text-decoration: none;
+
+    transition: background-color, color, .3s ease-in-out;
+
+}
+
+section .categoria .categorias-existentes .container .botoes .editar:hover {
+    background-color: var(--background-color-editar);
+
+    color: var(--text-color-white);
+
+}
+
+section .categoria .categorias-existentes .container .botoes .excluir:hover {
+    background-color: var(--background-color-excluir);
+
+    color: var(--text-color-white);
+
+}
+
+/* POSTAGEM */
+section .postagem {
+    width: 70%;
+    height: auto;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+}
+
+section .postagem .painel-postagem {
+    padding: 3%;
+
+    width: 64%;
+    height: auto;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+    background-color: var(--background-color-white);
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadow);
+
+    border-radius: 5px;
+    
+}
+
+section .postagem .painel-postagem p {
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-h1);
+    font-weight: 700;
+
+    color: var(--text-color-green);
+
+}
+
+section .postagem .painel-postagem form {
+    margin-top: 4%;
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+section .postagem .painel-postagem form label {
+    width: 100%;
+    height: auto;
+
+}
+
+section .postagem .painel-postagem form label input {
+    padding: 2%;
+
+    width: 96%;
+    height: auto;
+
+    border: none;
+
+    outline: none;
+
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 500;
+
+    color: var(--text-color-gray);
+
+}
+
+section .postagem .painel-postagem form label select {
+    padding: 2% 1%;
+
+    width: 96%;
+    height: auto;
+
+    border: none;
+
+    outline: none;
+
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 500;
+
+    color: var(--text-color-gray);
+
+}
+
+section .postagem .painel-postagem form label textarea {
+    padding: 2%;
+
+    width: 96%;
+    height: 10vh;
+
+    border: none;
+
+    outline: none;
+
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 500;
+
+    color: var(--text-color-gray);
+
+}
+
+section .postagem .painel-postagem form button {
+    padding: 1.5% 6%;
+
+    border: none;
+    border-radius: 50px;
+
+    outline: none;
+
+    background-color: var(--background-color-green);
+
+    color: var(--text-color-white);
+
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 500;
+
+    transition: background-color, .3s ease-in-out;
+
+}
+
+section .postagem .painel-postagem form button:hover {
+    background-color: var(--background-color-green-escuro);
+
+}
+
+section .postagem .categorias-existentes {
+    width: 48%;
+    height: auto;
+
+}
+
+section .postagem .categorias-existentes .container {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+    flex-wrap: wrap;
+
+}
+
+section .postagem .categorias-existentes .container .nome {
+    padding: 2%;
+
+    width: 56%;
+    height: auto;
+
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 500;
+
+    color: var(--text-color-green);
+
+}
+
+section .postagem .categorias-existentes .container .botoes {
+    padding: 2%;
+
+    width: 36%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+section .postagem .categorias-existentes .container .botoes a {
+    padding: 3% 6%;
+
+    border: none;
+    border-radius: 5px;
+
+    outline: none;
+
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 500;
+
+    color: var(--text-color-green);
+
+    background-color: var(--background-color-gray);
+
+    text-decoration: none;
+
+    transition: background-color, color, .3s ease-in-out;
+
+}
+
+section .postagem .categorias-existentes .container .botoes .editar:hover {
+    background-color: var(--background-color-editar);
+
+    color: var(--text-color-white);
+
+}
+
+section .postagem .categorias-existentes .container .botoes .excluir:hover {
+    background-color: var(--background-color-excluir);
+
+    color: var(--text-color-white);
+
+}
+
+/* TESTE */
+section .postagem .minhas-postagem {
+    padding: 2%;
+    margin: 0% 1% 0% 0%;
+
+    width: 24%;
+    height: auto;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    background-color: var(--background-color-white);
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadow);
+
+    border-radius: 5px;
+
+}
+
+section .postagem .minhas-postagem .titulo-minhas-postagens {
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-h2);
+    font-weight: 700;
+
+    color: var(--text-color-green);
+
+}
+
+section .postagem .minhas-postagem .novo-item {
+    width: 100%;
+    height: auto;
+
+}
+
+section .postagem .minhas-postagem .novo-item a {
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 600;
+
+    color: var(--text-color-gray);
+
+    text-decoration: none;
+
+    transition: color, .3s ease-in-out;
+
+}
+
+section .postagem .minhas-postagem .novo-item a:hover {
+    color: var(--text-color-green);
+
+}
+
+/* VER POSTAGEM */
+section .ver-postagem {
+    width: 70%;
+    height: auto;
+
+    background-color: var(--background-color-white);
+
+    box-shadow: 0px 3px 5px -5px var(--box-shadow);
+
+    border-radius: 5px;
+
+}
+
+section .ver-postagem .animal-focus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: auto;
+
+}
+
+section .ver-postagem .animal-focus .img {
+    width: 50%;
+    height: 70vh;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    border-radius: 5px 0px 0px 5px;
+
+}
+
+section .ver-postagem .animal-focus .dados-animal {
+    padding: 2%;
+
+    width: 46%;
+    height: 61vh;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+section .ver-postagem .animal-focus .dados-animal .nome-e-categoria-animal {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+    height: auto;
+
+}
+
+section .ver-postagem .animal-focus .dados-animal .nome-e-categoria-animal h2 {
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-h2);
+    font-weight: 600;
+
+    color: var(--text-color-green);
+
+}
+
+section .ver-postagem .animal-focus .dados-animal .nome-e-categoria-animal p {
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 500;
+
+    color: var(--text-color-gray);
+
+}
+
+section .ver-postagem .animal-focus .dados-animal .endereco-publicado-por {
+    position: relative;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+    height: auto;
+
+    margin-top: 5%;
+
+}
+
+section .ver-postagem .animal-focus .dados-animal .endereco-publicado-por .dados {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+section .ver-postagem .animal-focus .dados-animal .endereco-publicado-por .dados .icone {
+    width: 4%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 2%;
+    margin-top: 0.5%;
+
+}
+
+section .ver-postagem .animal-focus .dados-animal .endereco-publicado-por .dados .icone svg {
+    width: 100%;
+    height: auto;
+
+    color: var(--background-color-green-escuro);
+
+}
+
+section .ver-postagem .animal-focus .dados-animal .endereco-publicado-por .dados p {
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 500;
+
+    color: var(--text-color-gray);
+
+}
+
+section .ver-postagem .animal-focus .dados-animal .endereco-publicado-por .dados p a {
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 500;
+
+    color: var(--text-color-green);
+
+    text-decoration: none;
+
+}
+
+section .ver-postagem .animal-focus .dados-animal .endereco-publicado-por .historia {
+    margin-top: 5%;
+    margin-bottom: 2.5%;
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+section .ver-postagem .animal-focus .dados-animal .endereco-publicado-por .historia p {
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 500;
+
+    color: var(--text-color-gray);
+
+}
+
+section .ver-postagem .animal-focus .dados-animal .endereco-publicado-por .historia p strong {
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 600;
+
+    color: var(--text-color-green);
+    
+}
+
+section .ver-postagem .animal-focus .dados-animal .endereco-publicado-por .dados-responsavel {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+section .ver-postagem .animal-focus .dados-animal .endereco-publicado-por .dados-responsavel p {
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 500;
+
+    color: var(--text-color-gray);
+
+}
+
+section .ver-postagem .animal-focus .dados-animal .endereco-publicado-por .dados-responsavel p strong {
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 600;
+
+    color: var(--text-color-green);
+    
+}
+
+section .ver-postagem .animal-focus .dados-animal .endereco-publicado-por .adotar {
+    position: absolute;
+
+    margin-top: 100%;
+
+    padding: 2% 5%;
+
+    width: 90%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    flex-wrap: wrap;
+
+}
+
+section .ver-postagem .animal-focus .dados-animal .endereco-publicado-por .adotar a {
+    padding: 2% 5%;
+
+    width: 25%;
+    height: auto;
+
+    border-radius: 50px;
+
+    background-color: var(--background-color-green);
+
+    font-family: var(--font-amaranth);
+    font-size: var(--font-size-nome-animal-p);
+    font-weight: 600;
+
+    color: var(--text-color-white);
+
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}

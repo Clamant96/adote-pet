@@ -18,7 +18,9 @@ include './../app/autoload.php';
     <link rel="stylesheet" href="<?= URL ?>/public/css/style.css" />
     <link rel="stylesheet" href="<?= URL ?>/public/css/style-modal-home-get-focus-animal.css" />
     <link rel="stylesheet" href="<?= URL ?>/public/css/style-modal-home-post-categoria.css" />
+    <link rel="stylesheet" media="(max-width: 600px)" href="<?= URL ?>/public/css/style-600px.css" />
     <link rel="shortcut icon" href="<?= URL ?>/img/logo-adote-pet.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <?php

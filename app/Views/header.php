@@ -1,9 +1,9 @@
 <header>
     <div class="header">
-        <div class="img">
+        <div id="img" class="img">
             <img src="<?= URL ?>/img/logo-adote-pet.png" alt="<?= APP_NOME ?>" />
         </div>
-        <nav>
+        <nav id="nav">
             <div class="menu">
                 <a href="<?= URL.'/page/home' ?>">Home</a>
                 <a href="<?= URL.'/page/colabore' ?>">Colabore</a>
@@ -25,7 +25,7 @@
                 </a>
             </div>
         <?php else: ?>
-            <div class="login-cadastro">
+            <div id="menu-gerencia-login-cadastro" class="login-cadastro">
                 <a href="<?= URL.'/user/login' ?>">Entrar</a>
                 <a href="<?= URL.'/user/cadastrar' ?>" class="cadastro">Cadastre-se</a>
             </div>
